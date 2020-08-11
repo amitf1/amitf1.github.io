@@ -1,7 +1,7 @@
 ---
-title: "Time Series Prediction & Anomaly Detection on Iot Devices"
+title: "Time Series Prediction & Anomaly Detection"
 date: 2018-01-28
-tags: [Machine Learning, Data Science, Time Series, Prediction, Regression, Deep Learning, Neural Network, Anomaly Detction, Iot, CNN, LSTM]
+tags: [Time Series, Deep Learning, Anomaly Detction]
 header:
   image: "/images/perceptron/time-series.jpg"
 excerpt: "Time Series, Deep Learning, Anomaly Detction"
