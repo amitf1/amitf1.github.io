@@ -34,7 +34,7 @@ Then for fitting into the first layer of the network, which is a Convolution lay
 
 ### Neural Network Architecture CNN + Stacked LSTM's
 
-This architecture consists of:
+This architecture consists of: <p>
 a one  dimensional Convolution layer, followed by Max Pooling,
 then the output is flattened to fit the next layer, which is a LSTM layer, then another layer of LSTM, followed by a dense layer that outputs our desired 96 values.
 Huber loss is used, as it is better for dealing with outliers, MAE is also tracked along training.
