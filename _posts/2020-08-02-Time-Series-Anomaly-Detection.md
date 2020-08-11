@@ -1,6 +1,6 @@
 ---
 title: "Time Series Prediction & Anomaly Detection"
-date: 2018-01-28
+date: 2020-08-02
 tags: [Time Series, Deep Learning, Anomaly Detction]
 header:
   image: "/images/perceptron/time-series.jpg"
