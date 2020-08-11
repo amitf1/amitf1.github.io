@@ -37,24 +37,46 @@ Then for fitting into the first layer of the network, which is a Convolution lay
 This architecture consists of:
 a one  dimensional Convolution layer, followed by Max Pooling,
 then the output is flattened to fit the next layer, which is a LSTM layer, then another layer of LSTM, followed by a dense layer that outputs our desired 96 values.
+Huber loss is used, as it is better for dealing with outliers, MAE is also tracked along training.
 
 ```python
 
-multi_step_model = Sequential(
-[
-  TimeDistributed(Conv1D(filters=128, kernel_size=1, activation='relu'),
-                  input_shape=X_train.shape[1:]),
-  TimeDistributed(MaxPooling1D(pool_size=2)),
-  TimeDistributed(Flatten()),
-  LSTM(32, return_sequences=True),
-  LSTM(16, activation='relu'),
-  Dense(96)
-]
-)
-multi_step_model.compile(optimizer='adam', loss=Huber(), metrics=["mae"])
+time_steps_per_seq = int(CNFG.HIST_SIZE // CNFG.SUBSEQ_N)
+        multi_step_model = Sequential(
+            [
+                TimeDistributed(Conv1D(filters=64, kernel_size=1, activation='relu'),
+                                input_shape=(CNFG.SUBSEQ_N, time_steps_per_seq, 1)),
+                TimeDistributed(MaxPooling1D(pool_size=2)),
+                TimeDistributed(Flatten()),
+                LSTM(32, return_sequences=True),
+                LSTM(16, activation='relu'),
+                Dense(CNFG.TARGET_SIZE)
+            ]
+        )
+        optimizer = tf.keras.optimizers.Adam(learning_rate=3e-4)
+        loss = tf.keras.losses.Huber()
+        multi_step_model.compile(optimizer=optimizer, loss=loss, metrics=["mae"])
 ```
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/nn.png" alt="Neural Network Architecture">
+
+### Censored findings
+
+Results are improved significantly, as MAPE is around 7%.
+The model was able to generalize well, even when training on one location and predicting on another location achieves better results then the original model.
+
+#### Predicted values against ground Truth
+<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/pred.png" alt="Prediction">
+
+#### Anomaly Detection
+<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/anomaly.png" alt="Anomaly Detection">
+
+#### Generalization capabilities
+<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/generalization.png" alt="Generalization">
+
+#### Comparing to Facebook's Prophet
+<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/prophet.png" alt="Prophet">
+
 <!--
 
 What about a [link](https://github.com/amitf1)?
