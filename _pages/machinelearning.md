@@ -4,7 +4,7 @@ permalink: /machine-learning/
 title: "Machine Learning projects"
 author_profile: true
 header:
-  image: "/images/machine-learning2.png"
+  image: "/images/machine-learning2.jpg"
 ---
 
 <!-- {% include base_path %}
