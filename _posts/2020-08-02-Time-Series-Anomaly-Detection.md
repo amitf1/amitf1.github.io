@@ -13,7 +13,7 @@ mathjax: "true"
 
 This project was done as part of my Internship as a Data Scientist.
 The main goal was to improve a simplier model that predicts values of sensors to set a baseline for real time anomaly detection.
-The motivation for anomaly detction is to find pollution events.
+The motivation for anomaly detction is to find water pollution events.
 
 My model was designed to find patterns and aim to predict a **normal** behavior of the data.
 After achieving satisfying results on the validation and test set, the model is "trusted" as a baseline for normal behavior, which then if a significant deviation is detected, we can mark it as an anomaly.
@@ -34,7 +34,8 @@ Then for fitting into the first layer of the network, which is a Convolution lay
 
 ### Neural Network Architecture CNN + Stacked LSTM's
 
-This architecture consists of: <p>
+This architecture consists of:
+
 a one  dimensional Convolution layer, followed by Max Pooling,
 then the output is flattened to fit the next layer, which is a LSTM layer, then another layer of LSTM, followed by a dense layer that outputs our desired 96 values.
 Huber loss is used, as it is better for dealing with outliers, MAE is also tracked along training.
@@ -64,8 +65,9 @@ time_steps_per_seq = int(CNFG.HIST_SIZE // CNFG.SUBSEQ_N)
 
 Results are improved significantly, as MAPE is around 7%.
 The model was able to generalize well, even when training on one location and predicting on another location achieves better results then the original model.
+The model can handle a gap between training and prediction.
 
-#### Predicted values against ground Truth
+#### Predicted values against Ground Truth
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/pred.png" alt="Prediction">
 
 #### Anomaly Detection
