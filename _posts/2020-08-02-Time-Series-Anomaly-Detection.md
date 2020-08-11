@@ -66,15 +66,21 @@ The model was able to generalize well, even when training on one location and pr
 The model can handle a gap between training and prediction.
 
 #### Predicted values against Ground Truth
+The blue plot is the predicted values, the red one is the ground truth.
+We can see how close are the predicted values to the actual values.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/pred.png" alt="Prediction">
 
 #### Anomaly Detection
+We can see how on modt of the day the predicted values are close to the actual values, while the spikes, which is above the set threshold are marked as anomalies.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/anomaly.png" alt="Anomaly Detection">
 
 #### Generalization capabilities
+We can see how the predicted values are still pretty accurate, even when the model is trained on data take from different location.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/generalization.png" alt="Generalization">
 
 #### Comparing to Facebook's Prophet
+We can see how prophet's prediction is worse then the above results.
+Note that this was trained on the same location of prediction, and predicted without a gap from the trainig time, while the above results were trained on a different location and with a 1 month gap.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/prophet.png" alt="Prophet">
 
 <!--
