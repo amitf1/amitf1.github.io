@@ -8,17 +8,28 @@ excerpt: "Time Series, Deep Learning, Anomaly Detction"
 mathjax: "true"
 ---
 
-# H1 Heading
 
-## H2 Heading
+## Predictiong Iot Sensors' Values and Detecting Anomalies, Using Neural Networks
 
-### H3 Heading
+This project was done as part of my Internship as a Data Scientist.
+The main goal was to improve a simplier model that predicts values of sensors to set a baseline for real time anomaly detection.
+The motivation for anomaly detction is to find pollution events.
 
-Here's some basic text.
+My model was designed to find patterns and aim to predict a **normal** behavior of the data.
+After achieving goo results on the validation and test set, the model is "trusted" as a baseline for normal behavior, which then if a significant deviation is detected, we can mark it as an anomaly.
 
-And here's some *italics*
+The specifics are confidential so this post will show my work without the data, and censored findings.
 
-Here's some **bold** text.
+### Data Preprocessing
+
+The preprocessing was pretty simple, standardization, removing outliers, and filling missing values by interpolating and padding.
+
+### Creating Time Windows
+
+For my neural net's design, my data should consist of windows of two days - 192 samples and labels of one day - 96 samples.
+Then for fitting into the first layer of the network, which is a Convolution layer (elaborated next) the windows should be reshaped as a matrix, the two days windows are split to 8 subsequences, that way we can see patterns also in smaller resolutions (2 days ==>> quarters of days).
+
+
 
 What about a [link](https://github.com/amitf1)?
 
