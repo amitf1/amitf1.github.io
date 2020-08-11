@@ -4,10 +4,10 @@ permalink: /machine-learning/
 title: "Machine Learning projects"
 author_profile: true
 header:
-  image: "/images/machine-learning2.jpg.png"
+  image: "/images/machine-learning2.png"
 ---
 
-{% include base_path %}
+<!-- {% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}
@@ -16,4 +16,4 @@ header:
   {% for post in posts %}
     {% include archive-single.html %}
   {% endfor %}
-{% endfor %}
+{% endfor %} -->
