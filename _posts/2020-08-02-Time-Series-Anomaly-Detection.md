@@ -62,7 +62,7 @@ time_steps_per_seq = int(CNFG.HIST_SIZE // CNFG.SUBSEQ_N)
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/nn.png" alt="Neural Network Architecture">
 
 ### Training
-For the research part, I combined the callbacks - Reduce learning rate on Plateau, which is a nice learning rate schedualer that reduces the learning rate when no improvement is made, and also Early Stopping.
+For the research part, I combined the callbacks - Reduce learning rate on Plateau, which is a nice learning rate scheduler that reduces the learning rate when no improvement is made, and also Early Stopping.
 For deployment I found the learning rate of 3e-4 was stable enough and achieves good results.
 ### Censored findings
 Results were improved significantly, as MAPE is around 7%.
