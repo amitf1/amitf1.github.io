@@ -96,6 +96,8 @@ This is a flask app, currently locally hosted.
 The user, as shown below, can choose to upload an image or to take a picture using the camera.
 In the image below, you can see how we present a mobile phone with a bird image from Google, and we get the correct classification.
 Even with the poor image quality the model classifies correctly
-<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API1.png" alt="API">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API11.png" alt="API">
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API.png" alt="API">
+
 [Repository with the Full Code](https://github.com/amitf1/Birds_Classifier)
