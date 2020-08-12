@@ -68,7 +68,8 @@ For deployment I found the learning rate of 3e-4 was stable enough and achieves 
 Results were improved significantly, as MAPE is around 7%.
 The model was able to generalize well, even when training on one location and predicting on another location achieves better results then the original model.
 The model can handle a gap between training and prediction.
-* The y axis could not be revealed
+
+The y axis could not be revealed
 
 #### Predicted values against Ground Truth
 The blue plot is the predicted values, the red one is the ground truth.
