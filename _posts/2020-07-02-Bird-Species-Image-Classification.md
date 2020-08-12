@@ -82,7 +82,7 @@ We combined the following callbacks:
 * Early Stopping - stopping when we don't improve for 5 epochs.
 
 ### Results
-We got around 94% avarage F1 score on the validation and test sets, which is very good.
+We got around 94% average F1 score on the validation and test sets, which is very good.
 
 #### Accuracy Over Epochs
 
