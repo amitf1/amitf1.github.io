@@ -24,7 +24,7 @@ Species contain images of male and female birds, which often look very different
 Image backgrounds can harm generalization, if one bird is usually shows on snowy background, the model can fail when classifying this bird on other backgrounds.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/029.jpg" alt="Bird"> <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/051.png" alt="Bird">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/029.jpg" alt="Bird"> <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/051.jpg" alt="Bird">
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/111.jpg" alt="Bird"> <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/018.jpg" alt="Bird">
 ### Data Preprocessing
 
@@ -90,3 +90,12 @@ We got around 94% avarage F1 score on the validation and test sets, which is ver
 
 #### Loss Over Epochs
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/loss.png" alt="Loss">
+
+### API
+This is a flask app, currently locally hosted.
+The user, as shown below, can choose to upload an image or to take a picture using the camera.
+In the image below, you can see how we present a mobile phone with a bird image from Google, and we get the correct classification.
+Even with the poor image quality the model classifies correctly
+<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API1.png" alt="API">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API.png" alt="API">
+[Repository with the Full Code](https://github.com/amitf1/Birds_Classifier)

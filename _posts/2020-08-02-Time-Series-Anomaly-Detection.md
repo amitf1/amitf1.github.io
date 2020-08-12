@@ -87,7 +87,7 @@ We can see how the predicted values are still pretty accurate, even when the mod
 We can see how prophet's prediction is worse then the above results.
 Note that this was trained on the same location of prediction, and predicted without a gap from the training time, while the above results were after the model was trained on a different location and with a 1 month gap between training and prediction.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/prophet.png" alt="Prophet">
-
+[Repository with the Full Code](https://github.com/amitf1/Conv_LSTM_Time_Series_Prediction)
 <!--
 
 What about a [link](https://github.com/amitf1)?
