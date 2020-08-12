@@ -65,10 +65,10 @@ time_steps_per_seq = int(CNFG.HIST_SIZE // CNFG.SUBSEQ_N)
 For the research part, I combined the callbacks - Reduce learning rate on Plateau, which is a nice learning rate schedualer that reduces the learning rate when no improvement is made, and also Early Stopping.
 For deployment I found the learning rate of 3e-4 was stable enough and achieves good results.
 ### Censored findings
-
 Results were improved significantly, as MAPE is around 7%.
 The model was able to generalize well, even when training on one location and predicting on another location achieves better results then the original model.
 The model can handle a gap between training and prediction.
+* The y axis could not be revealed
 
 #### Predicted values against Ground Truth
 The blue plot is the predicted values, the red one is the ground truth.
