@@ -24,7 +24,7 @@ Species contain images of male and female birds, which often look very different
 Image backgrounds can harm generalization, if one bird is usually shows on snowy background, the model can fail when classifying this bird on other backgrounds.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/029.jpg" alt="Bird"> <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/051.jpg" alt="Bird">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/029.jpg" alt="Bird"> <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/108.jpg" alt="Bird">
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/111.jpg" alt="Bird"> <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/018.jpg" alt="Bird">
 ### Data Preprocessing
 
