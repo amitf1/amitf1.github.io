@@ -28,15 +28,15 @@ Job post:
 - Rest Countries ​- additional country info
 - Skills mining with "bag of skills" - We extracted "2-grams" from the job description and matched them to skills from our skills list. (example shown below)
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/glassdoor3.png" alt="skills">
+<img src="{{ site.url }}{{ site.baseurl }}/images/data-mining/glassdoor3.png" alt="skills">
 You can see how this one post, has many skills in it's description, and we add each skill to our table.
 
 ### Database Design
 Below is the ERD for our database.
-<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/glassdoor5.png" alt="erd">
+<img src="{{ site.url }}{{ site.baseurl }}/images/data-mining/glassdoor5.png" alt="erd">
 
 ## Example for possible analysis
 We can do many analysis on the DB we created, below is an example, how we found the 20 top needed skills for a Data Scientist within our data.
-<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/glassdoor6.png" alt="skills">
+<img src="{{ site.url }}{{ site.baseurl }}/images/data-mining/glassdoor6.png" alt="skills">
 
 [Repository with the Full Code](https://github.com/amitf1/Data_Mining_Glassdoor)
