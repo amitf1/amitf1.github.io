@@ -16,6 +16,7 @@ This data is then enriched and pushed into a MYSQL DB we created.
 
 ## The Data
 The following images shows example of the source that was scarped.
+
 Jobs list:
 <img src="{{ site.url }}{{ site.baseurl }}/images/data-mining/GLASSDOOR1.png" alt="jobs">
 Job post:
