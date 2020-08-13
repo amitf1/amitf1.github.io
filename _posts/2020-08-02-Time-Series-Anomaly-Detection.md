@@ -66,7 +66,7 @@ For the research part, I combined the callbacks - Reduce learning rate on Platea
 For deployment I found the learning rate of 3e-4 was stable enough and achieves good results.
 ### Censored findings
 Results were improved significantly, as MAPE is around 7%.
-The model was able to generalize well, even when training on one location and predicting on another location achieves better results then the original model.
+The model was able to generalize well, even when training predicting on different location then the training location, achieves better results then the original model.
 The model can handle a gap between training and prediction.
 
 The y axis could not be revealed
@@ -77,7 +77,7 @@ We can see how close are the predicted values to the actual values.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/pred.png" alt="Prediction">
 
 #### Anomaly Detection
-We can see how on most of the day the predicted values are close to the actual values, while the spikes, which is above the set threshold are marked as anomalies.
+We can see how on most of the day the predicted values are close to the actual values, while the spikes, which reach above the pre-set threshold, are marked as anomalies.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/anomaly.png" alt="Anomaly Detection">
 
 #### Generalization capabilities
@@ -86,6 +86,6 @@ We can see how the predicted values are still pretty accurate, even when the mod
 
 #### Comparing to Facebook's Prophet
 We can see how prophet's prediction is worse then the above results.
-Note that this was trained on the same location of prediction, and predicted without a gap from the training time, while the above results were after the model was trained on a different location and with a 1 month gap between training and prediction.
+Note that this model was trained on the same location of prediction, and predicted without a gap from the training time, while the above results were after the model was trained on a different location and with a 1 month gap between training and prediction. Hence we can infer that the above model is more robust.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/prophet.png" alt="Prophet">
 [Repository with the Full Code](https://github.com/amitf1/Conv_LSTM_Time_Series_Prediction)
