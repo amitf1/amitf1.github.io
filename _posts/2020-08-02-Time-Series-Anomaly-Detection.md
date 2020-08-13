@@ -20,7 +20,7 @@ After achieving satisfying results on the validation and test set, the model is 
 The specifics are confidential so this post will show my work without the data, and censored findings.
 
 ### Data Preprocessing
-
+`1`
 The preprocessing was pretty simple:
 * Standardization
 * Removing outliers
@@ -69,23 +69,21 @@ Results were improved significantly, as MAPE is around 7%.
 The model was able to generalize well, even when training predicting on different location then the training location, achieves better results then the original model.
 The model can handle a gap between training and prediction.
 
-The y axis could not be revealed
-
 #### Predicted values against Ground Truth
 The blue plot is the predicted values, the red one is the ground truth.
 We can see how close are the predicted values to the actual values.
-<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/pred.png" alt="Prediction">
+<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/pred_org.png" alt="Prediction">
 
 #### Anomaly Detection
 We can see how on most of the day the predicted values are close to the actual values, while the spikes, which reach above the pre-set threshold, are marked as anomalies.
-<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/anomaly.png" alt="Anomaly Detection">
+<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/anomaly_org.png" alt="Anomaly Detection">
 
 #### Generalization capabilities
 We can see how the predicted values are still pretty accurate, even when the model is trained on data take from different location.
-<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/generalization.png" alt="Generalization">
+<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/generalization_org.png" alt="Generalization">
 
 #### Comparing to Facebook's Prophet
 We can see how prophet's prediction is worse then the above results.
 Note that this model was trained on the same location of prediction, and predicted without a gap from the training time, while the above results were after the model was trained on a different location and with a 1 month gap between training and prediction. Hence we can infer that the above model is more robust.
-<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/prophet.png" alt="Prophet">
+<img src="{{ site.url }}{{ site.baseurl }}/images/time-series/prophet_org.png" alt="Prophet">
 [Repository with the Full Code](https://github.com/amitf1/Conv_LSTM_Time_Series_Prediction)
