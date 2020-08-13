@@ -47,7 +47,7 @@ We **flatten** the results we get from mobilenet, and use relu for the non linea
 Then a **dropout** layer - which we helped us overcome a minor overfitting issue.
 Finally we have a **dense** layer with 200 outputs, 1 for each specie, with softmax so we get probabilities.
 
-Only our layers were trained, **no finetuning was needed**
+Only our layers were trained, **no fine-tuning was needed**
 
 The nice thing about [MobileNet](https://arxiv.org/abs/1704.04861) is the use of Depthwise Separable Convolution which enables the network to be light, yet effective. You can read about this also it here [MobileNet](https://towardsdatascience.com/review-mobilenetv1-depthwise-separable-convolution-light-weight-model-a382df364b69)
 ```python
@@ -82,7 +82,7 @@ We combined the following callbacks:
 * Early Stopping - stopping when we don't improve for 5 epochs.
 
 ### Results
-We got around 94% average F1 score on the validation and test sets, which is very good.
+We got around **94% average F1 score** on the validation and test sets, which is very good.
 
 #### Accuracy Over Epochs
 
