@@ -49,7 +49,7 @@ Finally we have a **dense** layer with 200 outputs, 1 for each specie, with soft
 
 Only our layers were trained, **no fine-tuning was needed**
 
-The nice thing about [MobileNet](https://arxiv.org/abs/1704.04861) is the use of Depthwise Separable Convolution which enables the network to be light, yet effective. You can read about this also it here [MobileNet](https://towardsdatascience.com/review-mobilenetv1-depthwise-separable-convolution-light-weight-model-a382df364b69)
+The nice thing about [MobileNet](https://arxiv.org/abs/1704.04861) is the use of Depthwise Separable Convolution which enables the network to be light, yet effective. You can read about it also here [MobileNet](https://towardsdatascience.com/review-mobilenetv1-depthwise-separable-convolution-light-weight-model-a382df364b69)
 ```python
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
