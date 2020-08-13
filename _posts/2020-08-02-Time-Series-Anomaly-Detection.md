@@ -20,7 +20,6 @@ After achieving satisfying results on the validation and test set, the model is 
 The specifics are confidential so this post will show my work without the data, and censored findings.
 
 ### Data Preprocessing
-`1`
 The preprocessing was pretty simple:
 * Standardization
 * Removing outliers
