@@ -16,7 +16,7 @@ We also built an API, where a user could load an image, or use the camera to tak
 
 ### The Data
 The data consists of about 30,000 images of birds with their species as labels.
-The images' shape is 224*224*3.
+The images' shape is 224x224x3.
 Each class has around 140 train images.
 This task is challenging, because of several reasons, for once we have 200 classes, that's a lot, so there is definitely a room for mistakes.
 Some species looks similar to other species, where even human being, a domain expert could be wrong.
