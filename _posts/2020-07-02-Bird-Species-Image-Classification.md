@@ -3,7 +3,7 @@ title: "Bird Species Image Classification"
 date: 2020-08-02
 tags: [Computer Vision, Deep Learning]
 header:
-  image: "/images/Bird Species/birds4.jpg"
+  image: "/images/Bird Species/birds4_1.jpg"
 excerpt: "Computer Vision, Deep Learning"
 mathjax: "true"
 ---

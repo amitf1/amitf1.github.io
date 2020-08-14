@@ -3,7 +3,7 @@ title: "Time Series Prediction & Anomaly Detection"
 date: 2020-08-02
 tags: [Time Series, Deep Learning, Anomaly Detction]
 header:
-  image: "/images/time-series/time-series.jpg"
+  image: "/images/time-series/time-series_1.jpg"
 excerpt: "Time Series, Deep Learning, Anomaly Detction"
 mathjax: "true"
 ---

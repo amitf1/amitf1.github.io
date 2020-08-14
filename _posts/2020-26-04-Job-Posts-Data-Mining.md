@@ -3,7 +3,8 @@ title: "Job Posts Data Mining"
 date: 2020-04-26
 tags: [Data Mining, Web Scraping, Databases]
 header:
-  image: "/images/data-mining/data.png"
+  image: "/images/data-mining/jobs.jpeg"
+excerpt: "Data Mining, Web Scraping, Databases"
 mathjax: "true"
 ---
 

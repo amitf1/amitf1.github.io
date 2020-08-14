@@ -1,8 +1,8 @@
 ---
-title: "About"
+title: "About Me"
 permalink: /about/
 header:
-  image: "/images/data.jpg"
+  image: "/images/data_1.jpg"
 ---
 ## Amit Feldman
 
