@@ -9,7 +9,7 @@ mathjax: "true"
 ---
 
 
-## Predicting Iot Sensors' Values and Detecting Anomalies, Using Deep Learning
+## Predicting Values of IoT Sensors and Detecting Anomalies Using Deep Learning
 
 The main goal of this project was to achieve better results than a simpler existing model, that predicts values of sensors to set a baseline for real time anomaly detection.
 The motivation for anomaly detection is to find harmful events.
