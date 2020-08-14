@@ -9,7 +9,7 @@ mathjax: "true"
 ---
 
 
-## Web Scraping Glassdoor's job posts using selenium, and creation of a DB with the relevant data.
+## Web Scraping Glassdoor's job posts using Selenium and creation of a DB with the relevant data.
 
 We created a web scraper, that goes through defined job searches, and extracts relevant job posts data.
 This data is then enriched and pushed into a MYSQL DB we created.
