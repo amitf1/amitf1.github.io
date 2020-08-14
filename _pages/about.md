@@ -6,7 +6,7 @@ header:
 ---
 ## Amit Feldman
 
-* A Junior **data scientist**, doing a Data Science internship working with **Time Series** data from Iot devices.
+* A Junior **data scientist**, doing a Data Science internship working with **Time Series** data from IoT devices.
 * I did the ITC Data Science Bootcamp for 6 months, more than 1000 hours, and gained knowledge and **hands on work with Machine Learning**.
 * I have a few **Data science projects** using:
     - **Deep Learning**
