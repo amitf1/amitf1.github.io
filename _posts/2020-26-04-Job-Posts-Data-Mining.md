@@ -4,7 +4,6 @@ date: 2020-04-26
 tags: [Data Mining, Web Scraping, Databases]
 header:
   image: "/images/data-mining/data.png"
-excerpt: "Data Mining, Web Scraping, Databases"
 mathjax: "true"
 ---
 
