@@ -101,8 +101,8 @@ While we don't have a real bird around, we just opened an image from google on o
 We present to our laptop's camera the mobile phone with the bird image from Google.
 We got the correct classification and the corresponding Wikipedia page was opened in a new tab.
 Even with the poor quality of the picture we took the model was able to classify correctly.
-<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API11.png" alt="API">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API22.png" alt="API">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API.png" alt="API">
+<img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API2.png" alt="API">
 
 [Repository with the Full Code](https://github.com/amitf1/Birds_Classifier)
