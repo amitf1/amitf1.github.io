@@ -1,10 +1,10 @@
 ---
 title: "Time Series Prediction & Anomaly Detection"
 date: 2020-08-02
-tags: [Time Series, Deep Learning, Anomaly Detction]
+tags: [Time Series, Deep Learning, Anomaly Detection]
 header:
   image: "/images/time-series/time-series_1.jpg"
-excerpt: "Time Series, Deep Learning, Anomaly Detction"
+excerpt: "Time Series, Deep Learning, Anomaly Detection"
 mathjax: "true"
 ---
 
@@ -27,7 +27,7 @@ The preprocessing was pretty simple:
 
 ### Creating Time Windows
 
-For my neural net's design, my data should consist of windows of two days - 192 samples and labels of one day - 96 samples.
+For my neural net's design, my data should consist of windows of with two days of data each - 192 samples and the corresponding labels are the samples of following one day - 96 samples.
 Then for fitting into the first layer of the network, which is a Convolution layer (elaborated next) the windows should be reshaped as a matrix, the two days windows are split to 8 subsequences, that way we can see patterns also in smaller resolutions (2 days ==>> quarters of days).
 
 ### Neural Network Architecture CNN + Stacked LSTM's
@@ -65,11 +65,15 @@ For the research part, I combined the callbacks - Reduce learning rate on Platea
 For deployment I found the learning rate of 3e-4 was stable enough and achieves good results.
 ### Censored findings
 Results were improved significantly, as MAPE is around 7%.
-The model was able to generalize well, even when training predicting on different location then the training location, achieves better results then the original model.
+The model was able to generalize well, even when predicting on different location then the training location, achieves better results then the original model.
 The model can handle a gap between training and prediction.
 
+The following visualisations, shows full day predictions against the ground truth and an upper and lower bounds which are thresholds corresponding to the predicted values, which values beyond them will be considered as anomalies.
+**The y values represent the values of of the sensors measurements**
+**The X values are the samples during the day**
+
 #### Predicted values against Ground Truth
-The blue plot is the predicted values, the red one is the ground truth.
+The blue plot is the predicted values, the red one is the ground truth, in green are the boundaries described above.
 We can see how close are the predicted values to the actual values.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/pred_org.png" alt="Prediction">
 
@@ -78,11 +82,13 @@ We can see how on most of the day the predicted values are close to the actual v
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/anomaly_org.png" alt="Anomaly Detection">
 
 #### Generalization capabilities
-We can see how the predicted values are still pretty accurate, even when the model is trained on data take from different location.
+Now we take our model, which was already trained, and try to predict on a **different location** (sensors that are located elsewhere).
+We can see how the predicted values are still pretty accurate, even when the model is trained on data taken from different location.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/generalization_org.png" alt="Generalization">
 
 #### Comparing to Facebook's Prophet
-We can see how prophet's prediction is worse then the above results.
-Note that this model was trained on the same location of prediction, and predicted without a gap from the training time, while the above results were after the model was trained on a different location and with a 1 month gap between training and prediction. Hence we can infer that the above model is more robust.
+I trained a Prophet model, on the sensors data, and made a prediction to the same day as in the above example.
+We can see how prophet's prediction is worse than the above example.
+Note that this model was trained on the same location of it's prediction, and predicted without a gap from the training time, as opposed to the above example that it's model was trained on a different location and with a 1 month gap between training and prediction. Hence we can infer that the above model is more robust.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/prophet_org.png" alt="Prophet">
 [Repository with the Full Code](https://github.com/amitf1/Conv_LSTM_Time_Series_Prediction)

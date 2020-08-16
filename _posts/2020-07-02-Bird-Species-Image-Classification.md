@@ -18,16 +18,16 @@ We also built an API, where a user could load an image, or use the camera to tak
 The data consists of about 30,000 images of birds with their species as labels.
 The images' shape is 224x224x3.
 Each class has around 140 train images.
-This task is challenging, because of several reasons, for once we have 200 classes, that's a lot, so there is definitely a room for mistakes.
-Some species looks similar to other species, where even human being, a domain expert could be wrong.
-Species contain images of male and female birds, which often look very differently, which makes it harder to group them together.
-Image backgrounds can harm generalization, if one bird is usually shows on snowy background, the model can fail when classifying this bird on other backgrounds.
+This task is challenging because of several reasons:
+- We have 200 classes, that's a lot, so there is definitely a room for mistakes.
+- Some species looks similar to other species, where even human being, a domain expert could be wrong.
+- Species contain images of male and female birds, which often look very differently, which makes it harder to group them together.
+- Image backgrounds can harm generalization, if one bird is usually shows on snowy background, the model can fail when classifying this bird on other backgrounds.
 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/029.jpg" alt="Bird"> <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/108.jpg" alt="Bird">
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/111.jpg" alt="Bird"> <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/018.jpg" alt="Bird">
 ### Data Preprocessing
-
 We used ImageDataGenerator from Keras, to create a generator of batches of images, and rescale them by factor of 1/255.
 ```python
 from keras.preprocessing.image import ImageDataGenerator
@@ -78,11 +78,13 @@ model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate=0.05),
 
 ### Training
 We combined the following callbacks:
-* Reduce learning rate on Plateau, as our learning rate schedualer reduces the learning rate by factor of 0.5 when no improvement is made in the validation loss for 2 epochs.
+* Reduce learning rate on Plateau was used as our learning rate scheduler reduces the learning rate by factor of 0.5 when no improvement is made in the validation loss for 2 epochs.
 * Early Stopping - stopping when we don't improve for 5 epochs.
 
 ### Results
-We got around **94% average F1 score** on the validation and test sets, which is very good.
+After trying different models and architectures, we managed to get satisfying results where the model shown above was our winner.
+We got around **94% average F1 score** on the validation and test sets.
+(The confusion matrix and the classification report are too big to fit here, but you can see them on the notebook that is in the repository)
 
 #### Accuracy Over Epochs
 
@@ -94,8 +96,9 @@ We got around **94% average F1 score** on the validation and test sets, which is
 ### API
 This is a flask app, currently locally hosted.
 The user, as shown below, can choose to upload an image or to take a picture using the camera.
-In the image below, you can see how we present a mobile phone with a bird image from Google, and we get the correct classification, and the Wikipedia page was opened in a new tab.
-Even with the poor image quality the model classifies correctly
+The images below show the demo of taking a picture using the camera.
+We present to our camera a mobile phone with a bird image from Google, we got the correct classification and the corresponding Wikipedia page was opened in a new tab.
+Even with the poor image quality we took the model classified correctly.
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API11.png" alt="API">
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API.png" alt="API">
