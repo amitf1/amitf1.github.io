@@ -45,7 +45,7 @@ This architecture was built on top of **Mobilenet**, which was already trained o
 We **throw away the top layer of mobilenet**, which is optimized to different number of classes, and we also don't want to predict at that level yet.
 We **flatten** the results we get from mobilenet, and use relu as an activation function.
 Then a **dropout** layer - which helped us overcome a minor overfitting issue.
-Finally we have a **dense** layer with 200 outputs, 1 for each specie, with softmax activation function so we could get probabilities.
+Finally we have a **dense** layer with 200 outputs, one for each specie, with softmax activation function so we could get probabilities.
 
 Only our added layers were trained while Mobilenet's layers were frozen, **no fine-tuning was needed**
 
