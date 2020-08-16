@@ -69,7 +69,7 @@ The model was able to generalize well, even when predicting on different locatio
 The model can handle a gap between training and prediction.
 
 The following visualisations, shows full day predictions against the ground truth and an upper and lower bounds which are thresholds corresponding to the predicted values, which values beyond them will be considered as anomalies.
-**The y values represent the values of of the sensors measurements**
+**The y values represent the values of the sensors measurements**
 **The X values are the samples during the day**
 
 #### Predicted values against Ground Truth
@@ -88,7 +88,7 @@ We can see how the predicted values are still pretty accurate, even when the mod
 
 #### Comparing to Facebook's Prophet
 I trained a Prophet model, on the sensors data, and made a prediction to the same day as in the above example.
-We can see how prophet's prediction is worse than the above example.
+We can see how Prophet's prediction is worse than the above example.
 Note that this model was trained on the same location of it's prediction, and predicted without a gap from the training time, as opposed to the above example that it's model was trained on a different location and with a 1 month gap between training and prediction. Hence we can infer that the above model is more robust.
 <img src="{{ site.url }}{{ site.baseurl }}/images/time-series/prophet_org.png" alt="Prophet">
 [Repository with the Full Code](https://github.com/amitf1/Conv_LSTM_Time_Series_Prediction)
