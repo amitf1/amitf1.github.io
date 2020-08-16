@@ -100,7 +100,7 @@ The images below show the demo of taking a picture using the camera.
 While we don't have a real bird around, we just opened an image from google on our phone, while our app is opened on our laptop.
 We present to our laptop's camera the mobile phone with the bird image from Google.
 We got the correct classification and the corresponding Wikipedia page was opened in a new tab.
-Even with the poor image quality of the picture we took the model was able to classify correctly.
+Even with the poor quality of the picture we took the model was able to classify correctly.
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API11.png" alt="API">
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/Bird Species/API.png" alt="API">
