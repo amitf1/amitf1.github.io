@@ -97,7 +97,7 @@ We got around **94% average F1 score** on the validation and test sets.
 This is a flask app, currently locally hosted.
 The user, as shown below, can choose to upload an image or to take a picture using the camera.
 The images below show the demo of taking a picture using the camera.
-While we don't have a real bird around, we just opened an image from google on our phone, while our app is opened on our laptop.
+While we don't have a real bird around, we just opened an image from Google on our phone, while our app is opened on our laptop.
 We present to our laptop's camera the mobile phone with the bird image from Google.
 We got the correct classification and the corresponding Wikipedia page was opened in a new tab.
 Even with the poor quality of the picture we took the model was able to classify correctly.
