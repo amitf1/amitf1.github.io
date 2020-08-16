@@ -69,7 +69,9 @@ The model was able to generalize well, even when predicting on different locatio
 The model can handle a gap between training and prediction.
 
 The following visualisations, shows full day predictions against the ground truth and an upper and lower bounds which are thresholds corresponding to the predicted values, which values beyond them will be considered as anomalies.
+
 **The y values represent the values of the sensors measurements**
+
 **The X values are the samples during the day**
 
 #### Predicted values against Ground Truth
