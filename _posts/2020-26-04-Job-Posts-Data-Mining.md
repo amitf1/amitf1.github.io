@@ -28,8 +28,10 @@ The following API's were used:
 - Geopy​ - Find the Longitude and Latitude
 - Rest Countries ​- Add additional country info
 
+Skills mining using "Bag of Skills":
+
 Another useful information we added to our data was skills needed for each job.
-Skills mining using "Bag of Skills" - We extracted words and pairs of words (1&2-grams) from the job description and matched them to skills from our skills list.
+We extracted words and pairs of words (1&2-grams) from the job description and matched them to skills from our skills list.
 If a match was found we add a corresponding row to our skill-job table, enabling us to analyze the skills needed withing different jobs.
 
 ### Database Design
