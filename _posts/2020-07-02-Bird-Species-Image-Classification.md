@@ -42,12 +42,12 @@ test_data = General_datagen.flow_from_directory(TEST_DIR, target_size=(224,224))
 ### Neural Network Architecture based on MobileNet
 
 This architecture was built on top of **Mobilenet**, which was already trained on **Imagenet** and **freezing** it's weights.
-We **throw away the top layer of mobilenet**, which is optimized to different number of classes, and also we don't want to predict at that level yet.
-We **flatten** the results we get from mobilenet, and use relu for the non linearity.
-Then a **dropout** layer - which we helped us overcome a minor overfitting issue.
-Finally we have a **dense** layer with 200 outputs, 1 for each specie, with softmax so we get probabilities.
+We **throw away the top layer of mobilenet**, which is optimized to different number of classes, and we also don't want to predict at that level yet.
+We **flatten** the results we get from mobilenet, and use relu as an activation function.
+Then a **dropout** layer - which helped us overcome a minor overfitting issue.
+Finally we have a **dense** layer with 200 outputs, 1 for each specie, with softmax activation function so we could get probabilities.
 
-Only our layers were trained, **no fine-tuning was needed**
+Only our added layers were trained while Mobilenet's layers were frozen, **no fine-tuning was needed**
 
 The nice thing about [MobileNet](https://arxiv.org/abs/1704.04861) is the use of Depthwise Separable Convolution which enables the network to be light, yet effective. You can read about it also here [MobileNet](https://towardsdatascience.com/review-mobilenetv1-depthwise-separable-convolution-light-weight-model-a382df364b69)
 ```python
