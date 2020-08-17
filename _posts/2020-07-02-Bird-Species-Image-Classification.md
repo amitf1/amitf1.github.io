@@ -9,7 +9,7 @@ mathjax: "true"
 ---
 
 
-## Classify each image of a bird to one of 200 bird species, using Deep Leaning and Transfer Learning
+## Classify each image of a bird to one of 200 bird species, using Deep Learning and Transfer Learning
 
 The main goal of this project was to classify images of birds to their correct bird species.
 We also built an API, where a user could load an image, or use the camera to take a picture, and get the classification of the bird and it's Wikipedia page.
